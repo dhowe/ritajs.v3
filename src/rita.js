@@ -3,7 +3,7 @@ import Tagger from './tagger';
 import Stemmer from './stemmer';
 import Lexicon from './lexicon';
 import RiMarkov from './markov';
-import Operator from "./operator";
+// import Operator from "../misc/operator";
 import RiGrammar from './grammar';
 import Analyzer from './analyzer';
 import Tokenizer from './tokenizer';
@@ -12,27 +12,33 @@ import Conjugator from './conjugator';
 import Inflector from './inflector';
 import RandGen from './randgen';
 import Util from './util';
+// import RiScript from './riscript/riscript';
+
+import { Query } from "mingo"
+import { CstParser } from "chevrotain"
+
+
 
 class RiTa {
 
-  /*static addTransform() {
-    return RiScript.addTransform(...arguments);
-  }
-  static scripting() {
-    return new RiScript(...arguments);
-  }
+  // static addTransform() {
+  //   return RiScript.addTransform(...arguments);
+  // }
 
-  static articlize(s) {
-    return RiScript.articlize(s);
-  }
-  static evaluate() {
-    return RiScript.eval(...arguments);
-  }
+  // static scripting() {
+  //   return new RiScript(...arguments);
+  // }
 
-  static getTransforms() {
-    return RiScript.transforms; // according to Java ?
-  }
-  */
+  // static articlize(s) {
+  //   return RiScript.articlize(s);
+  // }
+  // static evaluate() {
+  //   return RiScript.eval(...arguments);
+  // }
+
+  // static getTransforms() {
+  //   return RiScript.transforms;
+  // }
 
   static alliterations() {
     return RiTa.lexicon().alliterations(...arguments);
@@ -251,7 +257,7 @@ Stemmer.parent = RiTa;
 RiTa.RiGrammar = RiGrammar;
 RiTa.RiMarkov = RiMarkov;
 //RiTa.RiScript = RiScript;
-RiTa.Operator = Operator;
+// RiTa.Operator = Operator;
 RiTa.Stemmer = Stemmer;
 RiTa.Util = Util;
 

@@ -16,6 +16,7 @@ async function loadTestingDeps() {
   if (typeof process !== 'undefined' && process.env) { // we are in node
     let path = (process.env.NODE_ENV === 'dev' && !testTranspiled) ? '../src' : '../dist';
     let file = path + (testWithoutLex ? '/rita-micro.js' : '/rita.js');
+    console.log("DONE");
     let module = await import(file);
     RiTa = module.default;
     RiTa.HAS_LEXICON = !testWithoutLex;

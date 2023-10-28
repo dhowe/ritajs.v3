@@ -1,0 +1,6 @@
+{
+  "mochaExplorer.require": "esm",
+  "mochaExplorer.env": {
+    "NODE_ENV": "dev"
+  }
+}
